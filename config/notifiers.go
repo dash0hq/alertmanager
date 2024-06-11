@@ -461,6 +461,7 @@ type SlackConfig struct {
 	Fields      []*SlackField  `yaml:"fields,omitempty" json:"fields,omitempty"`
 	ShortFields bool           `yaml:"short_fields" json:"short_fields,omitempty"`
 	Footer      string         `yaml:"footer,omitempty" json:"footer,omitempty"`
+	FooterIcon  string         `yaml:"footer_icon,omitempty" json:"footer_icon,omitempty"`
 	Fallback    string         `yaml:"fallback,omitempty" json:"fallback,omitempty"`
 	CallbackID  string         `yaml:"callback_id,omitempty" json:"callback_id,omitempty"`
 	IconEmoji   string         `yaml:"icon_emoji,omitempty" json:"icon_emoji,omitempty"`

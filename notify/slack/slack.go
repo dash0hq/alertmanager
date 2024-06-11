@@ -22,6 +22,7 @@ import (
 	"net/http"
 	"os"
 	"strings"
+	"time"
 
 	"github.com/go-kit/log"
 	"github.com/go-kit/log/level"
@@ -126,6 +127,8 @@ func (n *Notifier) Notify(ctx context.Context, as ...*types.Alert) (bool, error)
 		ImageURL:   tmplText(n.conf.ImageURL),
 		ThumbURL:   tmplText(n.conf.ThumbURL),
 		Footer:     tmplText(n.conf.Footer),
+		FooterIcon: n.conf.FooterIcon,
+		Timestamp:  time.Now().Unix(),
 		Color:      tmplText(n.conf.Color),
 		MrkdwnIn:   markdownIn,
 	}
